@@ -1,0 +1,19 @@
+para pasar la base de datos al contenedor 
+
+docker cp labasededatos namecontainer:/
+
+entramos al contenedor 
+
+docker compose exec db bash
+
+ls
+
+mysql -u root -p controlescolar < controlescolar.sql
+contraseña admin123
+
+para hacer un respaldo
+mysqldump -u root -p basededatos > nombre del archivo
+
+nos salimos del contenedor
+
+docker cp contenedor:/el archivo que queremos sacar
